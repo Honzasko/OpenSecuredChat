@@ -3,7 +3,7 @@
 
 Server::Object *s;
 
-void sigint(int signum){
+extern "C" void sigint(int signum){
     if(s->IsInitialized()) s->Stop();
     delete s;
 }
